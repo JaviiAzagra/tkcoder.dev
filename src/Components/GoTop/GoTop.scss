@@ -1,0 +1,22 @@
+@import "../../Styles/Schema.scss";
+
+.gotop {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  right: 20px;
+  background-color: $bg-secondary-color;
+  padding: 8px 8px;
+  border-radius: 8px;
+
+  svg {
+    stroke: $font-color;
+  }
+}
+
+.gotop:hover {
+  background-color: #1a2a2e;
+  cursor: pointer;
+}

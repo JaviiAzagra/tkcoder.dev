@@ -1,0 +1,81 @@
+@import "../../../Styles/Schema.scss";
+
+.containerOhmyposh {
+  padding: 0 30% 0 30%;
+  padding-top: 120px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: $font-color;
+
+  .text {
+    color: $font-secondary-color;
+  }
+
+  .title {
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 55px;
+    font-weight: 600;
+    color: $font-color;
+  }
+
+  .tutorial {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 50px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: $font-color;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 50px;
+  }
+
+  .terminal {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 5px;
+    border-radius: 12px;
+    overflow-x: auto;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .containerOhmyposh {
+    padding: 0 10% 0 10%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .containerOhmyposh {
+    padding: 0 10% 0 10%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+
+    .title h1 {
+      font-size: 2.5rem;
+    }
+  }
+}

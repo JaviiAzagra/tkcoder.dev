@@ -1,0 +1,56 @@
+@import "../../Styles/Schema.scss";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 2% 20% 2% 20%;
+  border-top: $border;
+
+  &--links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: $font-secondary-color;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.4em;
+    }
+  }
+
+  &--social {
+    display: flex;
+    gap: 12px;
+
+    svg {
+      stroke: $font-secondary-color;
+    }
+    svg:hover {
+      stroke: $font-color;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+    padding: 2% 8% 2% 8%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .footer {
+    padding: 8% 8% 8% 8%;
+    &--links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+  }
+}

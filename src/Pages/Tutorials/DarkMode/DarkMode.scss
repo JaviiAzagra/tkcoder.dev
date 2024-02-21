@@ -1,0 +1,71 @@
+@import "../../../Styles/Schema.scss";
+.container {
+  padding: 0 30% 0 30%;
+  padding-top: 120px;
+  padding-bottom: 100px;
+  color: $font-color;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .title {
+    margin-bottom: 25px;
+  }
+
+  .text p {
+    color: $font-secondary-color;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 50px;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $font-color;
+    text-decoration: none;
+  }
+
+  .tutorial-1 {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .terminal {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 5px;
+    border-radius: 12px;
+  }
+
+  img {
+    width: 100%px;
+    border-radius: 5px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .container {
+    padding: 0 10% 0 10%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    padding: 0 10% 0 10%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+
+    .title h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
