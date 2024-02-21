@@ -9,10 +9,12 @@ import Contact from "./Pages/Contact/Contact";
 import GoTop from "./Components/GoTop/GoTop";
 import DarkMode from "./Pages/Tutorials/DarkMode/DarkMode";
 import OhMyPosh from "./Pages/Tutorials/OhMyPosh/OhMyPosh";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
     <div className="App">
+      <Analytics />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
