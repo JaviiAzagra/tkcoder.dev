@@ -34,6 +34,7 @@ const Navbar = () => {
       <div className="navbar--logo">
         <Link to="/">
           <img src="/assets/logowhite.png" alt="LogoTkCoder" />
+          <h1>TkCoder</h1>
         </Link>
       </div>
       <div className="navbar--links">

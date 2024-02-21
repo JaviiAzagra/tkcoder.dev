@@ -8,10 +8,8 @@ const Home = () => {
   return (
     <div className="home">
       <div className="home--top">
-        <div className="home--top__overlay">
-          <h1>Mejora tus habilidades en desarrollo web</h1>
-        </div>
-        <img src="/assets/hometopimg.jpeg" alt="LaptopHome" />
+        <h1>Mejora tus habilidades en desarrollo web</h1>
+        <img src="/assets/logohome.png" alt="LaptopHome" />
       </div>
       <div className="home--tutorials">
         <div className="home--tutorials__title">
