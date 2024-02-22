@@ -92,9 +92,10 @@
           font-size: 14px;
           color: $font-secondary-color;
         }
-
-        button {
-          width: 100px;
+        &--link {
+          padding-top: 20px;
+        }
+        a {
           background-color: $bg-secondary-color;
           color: $font-color;
           border: none;
@@ -102,9 +103,11 @@
           border-radius: 8px;
           margin-top: 15px;
           cursor: pointer;
+          font-size: 14px;
+          text-decoration: none;
         }
 
-        button:hover {
+        a:hover {
           background-color: #1a2a2e;
         }
       }

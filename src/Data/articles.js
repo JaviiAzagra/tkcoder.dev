@@ -5,6 +5,7 @@ export const articles = [
       "En este artículo, te presentaré las 10 extensiones que son imprescindibles para maximizar tu experiencia con Visual Studio Code y simplificar tus tareas diarias.",
     image: "/assets/vscodeextensionesimg.jpg",
     type: "vscode",
+    url: "/articles/top-10-extensiones-visual-studio-code",
   },
   {
     title: "Herramientas Esenciales para Desarrolladores Full Stack",

@@ -27,6 +27,13 @@ export const tutorials = [
     image: "/assets/i18n.webp",
     type: "react",
   },
+  {
+    title: "Como crear un nuevo proyecto en React",
+    description:
+      "En este tutorial te enseñaré cómo crear un nuevo proyecto en React desde cero.",
+    image: "/assets/reacttutorial.png",
+    type: "react",
+  },
 ];
 
 export default tutorials;

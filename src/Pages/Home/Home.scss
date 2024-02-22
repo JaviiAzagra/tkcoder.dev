@@ -100,6 +100,9 @@
         gap: 18px;
 
         &__text {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
           h2 {
             font-size: 16px;
           }
@@ -108,19 +111,23 @@
             font-size: 14px;
             font-weight: 400;
           }
-          button {
-            width: 100px;
-            background-color: $bg-secondary-color;
-            color: $font-color;
-            border: none;
-            padding: 10px;
-            border-radius: 8px;
-            margin-top: 15px;
-            cursor: pointer;
-          }
 
-          button:hover {
-            background-color: #1a2a2e;
+          &--link {
+            padding-top: 20px;
+            a {
+              background-color: $bg-secondary-color;
+              color: $font-color;
+              border: none;
+              padding: 8px 10px;
+              border-radius: 8px;
+              margin-top: 20px;
+              cursor: pointer;
+              font-size: 14px;
+            }
+
+            a:hover {
+              background-color: #1a2a2e;
+            }
           }
         }
 

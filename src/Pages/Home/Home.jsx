@@ -32,18 +32,18 @@ const Home = () => {
         </div>
         <div className="home--articles__article">
           {articles.map((article, index) => (
-            <Link>
-              <div key={index} className="home--articles__article--card">
-                <div className="home--articles__article--card__text">
-                  <h2>{article.title}</h2>
-                  <p>{article.description}</p>
-                  <button>Leer mas</button>
-                </div>
-                <div className="home--articles__article--card__img">
-                  <img src={article.image} alt={article.title} />
+            <div key={index} className="home--articles__article--card">
+              <div className="home--articles__article--card__text">
+                <h2>{article.title}</h2>
+                <p>{article.description}</p>
+                <div className="home--articles__article--card__text--link">
+                  <Link to={article.url}>Leer mas</Link>
                 </div>
               </div>
-            </Link>
+              <div className="home--articles__article--card__img">
+                <img src={article.image} alt={article.title} />
+              </div>
+            </div>
           ))}
         </div>
       </div>

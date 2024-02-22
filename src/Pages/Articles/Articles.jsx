@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Articles.scss";
 import { articles } from "../../Data/articles";
+import { Link } from "react-router-dom";
 
 const Articles = () => {
   const types = {
@@ -62,7 +63,9 @@ const Articles = () => {
             <div className="articles--container__card--text">
               <h2>{article.title}</h2>
               <p>{article.description}</p>
-              <button>Leer mas</button>
+              <div className="articles--container__card--text--link">
+                <Link to={article.url}>Leer mas</Link>
+              </div>
             </div>
             <div className="articles--container__card--img">
               <img src={article.image} alt={article.title} />
