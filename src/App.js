@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 import Popup from "./Components/Popup/Popup";
 import VscodeEx from "./Pages/Articles/VscodeEx/VscodeEx";
 import { useSpring, animated } from "react-spring";
+import Prueba from "./Pages/Articles/Prueba/Prueba";
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
@@ -44,26 +45,29 @@ function App() {
       <Analytics />
       {showPopup && <Popup handleClose={handleClosePopup} />}
       <Navbar />
-      <animated.div style={styles}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/tutorials" element={<Tutorials />} />
-          <Route path="/articles" element={<Articles />} />
-          <Route path="/contact" element={<Contact />} />
-          {/* Tutorials Routes */}
-          <Route path="/tutorials/dark-mode-react" element={<DarkMode />} />
-          <Route
-            path="/tutorials/instalar-ohmyposh-windows"
-            element={<OhMyPosh />}
-          />
-          {/* Articles Routes */}
-          <Route
-            path="/articles/top-10-extensiones-visual-studio-code"
-            element={<VscodeEx />}
-          />
-        </Routes>
-      </animated.div>
-      <GoTop />
+      <div className="layout">
+        <animated.div style={styles}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/tutorials" element={<Tutorials />} />
+            <Route path="/articles" element={<Articles />} />
+            <Route path="/contact" element={<Contact />} />
+            {/* Tutorials Routes */}
+            <Route path="/tutorials/dark-mode-react" element={<DarkMode />} />
+            <Route
+              path="/tutorials/instalar-ohmyposh-windows"
+              element={<OhMyPosh />}
+            />
+            {/* Articles Routes */}
+            <Route
+              path="/articles/top-10-extensiones-visual-studio-code"
+              element={<VscodeEx />}
+            />
+            <Route path="/prueba" element={<Prueba />} />
+          </Routes>
+        </animated.div>
+        <GoTop />
+      </div>
       <Footer />
     </div>
   );
