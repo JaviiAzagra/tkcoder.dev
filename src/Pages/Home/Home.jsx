@@ -16,7 +16,7 @@ const Home = () => {
           <h1>Tutoriales Destacados</h1>
         </div>
         <div className="home--tutorials__tutorial">
-          {tutorials.map((tutorial, index) => (
+          {tutorials.slice(0, 3).map((tutorial, index) => (
             <Link to={tutorial.url}>
               <div key={index} className="home--tutorials__tutorial--card">
                 <img src={tutorial.image} alt={tutorial.title} />
@@ -31,7 +31,7 @@ const Home = () => {
           <h1>Artículos Destacados</h1>
         </div>
         <div className="home--articles__article">
-          {articles.map((article, index) => (
+          {articles.slice(0, 3).map((article, index) => (
             <div key={index} className="home--articles__article--card">
               <div className="home--articles__article--card__text">
                 <h2>{article.title}</h2>

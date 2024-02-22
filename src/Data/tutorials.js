@@ -16,6 +16,13 @@ export const tutorials = [
     url: "/tutorials/instalar-ohmyposh-windows",
   },
   {
+    title: "Como crear un nuevo proyecto en React",
+    description:
+      "En este tutorial te enseñaré cómo crear un nuevo proyecto en React desde cero.",
+    image: "/assets/reacttutorial.png",
+    type: "react",
+  },
+  {
     title: "Como crear un menú hamburguesa con HTML, CSS y JavaScript",
     description: "Como crear un menú hamburguesa con HTML, CSS y JavaScript",
     image: "/assets/hamburguesaimg.webp",
@@ -25,13 +32,6 @@ export const tutorials = [
     title: "Como crear un web en varios idiomas con i18n.js",
     description: "Como crear un web en varios idiomas con i18n.js",
     image: "/assets/i18n.webp",
-    type: "react",
-  },
-  {
-    title: "Como crear un nuevo proyecto en React",
-    description:
-      "En este tutorial te enseñaré cómo crear un nuevo proyecto en React desde cero.",
-    image: "/assets/reacttutorial.png",
     type: "react",
   },
 ];

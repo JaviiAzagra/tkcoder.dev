@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import Navbar from "./Views/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
 import Footer from "./Views/Footer/Footer";
@@ -13,6 +13,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { useEffect, useState } from "react";
 import Popup from "./Components/Popup/Popup";
 import VscodeEx from "./Pages/Articles/VscodeEx/VscodeEx";
+import { useSpring, animated } from "react-spring";
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
@@ -29,28 +30,39 @@ function App() {
     setShowPopup(false);
   };
 
+  const styles = useSpring({
+    from: { opacity: 0, transform: "translateY(-50px)" },
+    to: async (next) => {
+      await next({ opacity: 1, transform: "translateY(0)" });
+      await next({ blur: "200px" });
+    },
+    config: { tension: 100, friction: 30 },
+  });
+
   return (
     <div className="App">
       <Analytics />
       {showPopup && <Popup handleClose={handleClosePopup} />}
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/tutorials" element={<Tutorials />} />
-        <Route path="/articles" element={<Articles />} />
-        <Route path="/contact" element={<Contact />} />
-        {/* Tutorials Routes */}
-        <Route path="/tutorials/dark-mode-react" element={<DarkMode />} />
-        <Route
-          path="/tutorials/instalar-ohmyposh-windows"
-          element={<OhMyPosh />}
-        />
-        {/* Articles Routes */}
-        <Route
-          path="/articles/top-10-extensiones-visual-studio-code"
-          element={<VscodeEx />}
-        />
-      </Routes>
+      <animated.div style={styles}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/tutorials" element={<Tutorials />} />
+          <Route path="/articles" element={<Articles />} />
+          <Route path="/contact" element={<Contact />} />
+          {/* Tutorials Routes */}
+          <Route path="/tutorials/dark-mode-react" element={<DarkMode />} />
+          <Route
+            path="/tutorials/instalar-ohmyposh-windows"
+            element={<OhMyPosh />}
+          />
+          {/* Articles Routes */}
+          <Route
+            path="/articles/top-10-extensiones-visual-studio-code"
+            element={<VscodeEx />}
+          />
+        </Routes>
+      </animated.div>
       <GoTop />
       <Footer />
     </div>

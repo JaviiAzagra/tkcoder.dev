@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ toggleDarkMode, darkMode }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isBackgroundBlocked, setIsBackgroundBlocked] = useState(false);
 
@@ -39,9 +39,14 @@ const Navbar = () => {
       </div>
       <div className="navbar--links">
         {LinksNavbar.map((link) => (
-          <Link onClick={pageUp} to={link.path} key={link.id}>
+          <NavLink
+            activeClassName="active"
+            onClick={pageUp}
+            to={link.path}
+            key={link.id}
+          >
             {link.name}
-          </Link>
+          </NavLink>
         ))}
       </div>
       <div onClick={toggleMenuMobile} className="navbar--menu">
@@ -87,9 +92,13 @@ const Navbar = () => {
             <div className="mobilemenu--content__links">
               <div className="mobilemenu--content__links--link">
                 {LinksNavbar.map((link) => (
-                  <Link onClick={toggleMenuMobile} to={link.path} key={link.id}>
+                  <NavLink
+                    onClick={toggleMenuMobile}
+                    to={link.path}
+                    key={link.id}
+                  >
                     {link.name}
-                  </Link>
+                  </NavLink>
                 ))}
               </div>
               <div className="mobilemenu--content__links--social">

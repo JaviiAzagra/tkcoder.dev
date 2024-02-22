@@ -43,6 +43,17 @@
       text-decoration: underline 2px;
       text-underline-offset: 0.4em;
     }
+
+    .active {
+      text-decoration: underline 2px $font-secondary-color;
+      text-underline-offset: 0.4em;
+    }
+
+    &__theme {
+      height: auto;
+      border-left: solid 1px #cccccc;
+      padding-left: 20px;
+    }
   }
 
   &--menu {
