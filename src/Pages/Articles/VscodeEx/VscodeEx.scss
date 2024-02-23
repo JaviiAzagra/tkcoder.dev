@@ -47,6 +47,18 @@
   }
 }
 
+.comments {
+  h2,
+  h3,
+  p {
+    color: $font-color;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
 @media screen and (max-width: 1195px) {
   .containerVscodeEx {
     padding: 0 10% 0 10%;

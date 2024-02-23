@@ -1,7 +1,98 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./OhMyPosh.scss";
+import axios from "axios";
+import Pagination from "../../../Components/Pagination/Pagination";
 
 const OhMyPosh = () => {
+  const [comment, setComment] = useState({
+    name: "",
+    content: "",
+    date: new Date().toISOString().split("T")[0],
+    url: "ohmyposh",
+  });
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [commentsPerPage] = useState(5); // Número de comentarios por página
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setComment((prevComment) => ({
+      ...prevComment,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmitComment = async () => {
+    try {
+      const response = await fetch(
+        "https://tkcoder-dev-api.vercel.app/comments/create",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(comment),
+        }
+      );
+
+      if (response.ok) {
+        console.log("Comentario enviado exitosamente");
+        window.location.reload();
+      } else {
+        console.error("Error al enviar el comentario");
+      }
+    } catch (error) {
+      console.error("Error de red:", error);
+    }
+  };
+
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `https://tkcoder-dev-api.vercel.app/comments`
+        );
+
+        const commentsData = response.data.filter(
+          (item) => item.url === "ohmyposh"
+        );
+        setData(commentsData.reverse());
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // Obtener los comentarios actuales según la página
+  const indexOfLastComment = currentPage * commentsPerPage;
+  const indexOfFirstComment = indexOfLastComment - commentsPerPage;
+  const currentComments =
+    data && data.slice(indexOfFirstComment, indexOfLastComment);
+
+  // Cambiar de página
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  /* const images = [
+    "/assets/logos/js.png",
+    "/assets/logos/react.png",
+    "/assets/logos/html.png",
+  ];
+
+  const [randomImage, setRandomImage] = useState("");
+
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    setRandomImage(images[randomIndex]);
+  }, []); */
+
   return (
     <div class="containerOhmyposh">
       <div class="title">
@@ -145,6 +236,69 @@ const OhMyPosh = () => {
           sistema. Disfruta de tu nuevo prompt de PowerShell con información
           útil y un aspecto visualmente atractivo.
         </p>
+      </div>
+      <div className="comments">
+        <h2>Comentarios</h2>
+        <input
+          type="text"
+          name="name"
+          value={comment.name}
+          onChange={handleInputChange}
+          placeholder="Tu nombre"
+        />
+        <textarea
+          type="text"
+          name="content"
+          value={comment.content}
+          onChange={handleInputChange}
+          placeholder="Tu comentario"
+        />
+        <input
+          style={{ display: "none" }}
+          type="date"
+          name="date"
+          value={comment.date}
+          onChange={handleInputChange}
+          placeholder="Fecha"
+          disabled
+        />
+        <input
+          style={{ display: "none" }}
+          type="text"
+          name="url"
+          value={comment.url}
+          onChange={handleInputChange}
+          disabled
+        />
+        <button onClick={handleSubmitComment}>Enviar</button>
+        <div className="comments--container">
+          {loading && <p>Cargando comentarios...</p>}
+          {error && <p>Error al cargar comentarios: {error.message}</p>}
+          {currentComments &&
+            currentComments.reverse().map((item) => (
+              <div className="comments--container__comment" key={item.id}>
+                <div className="shuffle">
+                  {/* <img src="/assets/logos/js.png" alt="Userimg" />
+                  <img src="/assets/logos/react.png" alt="Userimg" />
+                  <img src="/assets/logos/html.png" alt="Userimg" /> */}
+                  <img src="/assets/userimg.png" alt="Userimg" />
+                </div>
+                <div>
+                  <h3>{item.name}</h3>
+                  <p>{item.content}</p>
+                  {/* <p>{item.date}</p> */}
+                </div>
+              </div>
+            ))}
+          {currentComments && currentComments.length === 0 && (
+            <p>No hay comentarios</p>
+          )}
+        </div>
+        <Pagination
+          itemsPerPage={commentsPerPage}
+          totalItems={data && data.length}
+          paginate={paginate}
+        />
       </div>
     </div>
   );

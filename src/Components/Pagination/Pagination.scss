@@ -1,0 +1,28 @@
+@import "../../Styles/Schema.scss";
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 50px;
+  color: $font-secondary-color;
+}
+
+.pagination li {
+  cursor: pointer;
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: $border;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination li:hover {
+  color: $font-color;
+}
+
+.pagination li.active {
+  background-color: #007bff;
+  color: #fff;
+}

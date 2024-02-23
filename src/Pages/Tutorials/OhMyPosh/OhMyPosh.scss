@@ -59,6 +59,84 @@
   }
 }
 
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  input {
+    border: none;
+    background-color: $bg-secondary-color;
+    padding: 20px;
+    border-radius: 8px;
+    color: $font-secondary-color;
+  }
+
+  textarea {
+    border: none;
+    background-color: $bg-secondary-color;
+    padding: 20px;
+    border-radius: 8px;
+    color: $font-secondary-color;
+    resize: none;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  input::placeholder {
+    color: $font-secondary-color;
+  }
+
+  textarea:focus {
+    outline: none;
+  }
+
+  textarea::placeholder {
+    color: $font-secondary-color;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: $bg-secondary-color;
+    border: none;
+    border-radius: 8px;
+    color: $font-color;
+    font-weight: 700;
+    width: 200px;
+  }
+  button:hover {
+    background-color: #32404b;
+  }
+
+  &--container {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+
+    &__comment {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      h3 {
+        text-transform: capitalize;
+      }
+
+      p {
+        color: $font-secondary-color;
+      }
+    }
+    img {
+      width: 60px;
+    }
+  }
+}
+
 @media screen and (max-width: 1195px) {
   .containerOhmyposh {
     padding: 0 10% 0 10%;

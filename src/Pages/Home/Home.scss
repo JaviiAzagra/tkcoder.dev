@@ -27,6 +27,7 @@
       width: 300px;
       object-fit: cover;
       border-radius: 8px;
+      filter: drop-shadow(0 0 15px $font-secondary-color);
     }
   }
 
