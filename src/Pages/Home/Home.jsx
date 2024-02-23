@@ -5,6 +5,53 @@ import { tutorials } from "../../Data/tutorials";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  /* const [tutorials, setTutorials] = useState(null);
+  const [articles, setArticles] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://tkcoder-dev-api.vercel.app/tutorials"
+        );
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const jsonData = await response.json();
+        setTutorials(jsonData.slice(0, 3));
+      } catch (error) {
+        setError(error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []); */
+
+  /* useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://tkcoder-dev-api.vercel.app/articles"
+        );
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const jsonData = await response.json();
+        setArticles(jsonData.slice(0, 3));
+      } catch (error) {
+        setError(error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+ */
   return (
     <div className="home">
       <div className="home--top">
@@ -24,6 +71,15 @@ const Home = () => {
               </div>
             </Link>
           ))}
+          {/* {tutorials &&
+            tutorials.map((item) => (
+              <Link to={item.url}>
+                <div className="home--tutorials__tutorial--card">
+                  <img src={item.img} alt={item.title} />
+                  <p>{item.description}</p>
+                </div>
+              </Link>
+            ))} */}
         </div>
       </div>
       <div className="home--articles">
@@ -45,6 +101,22 @@ const Home = () => {
               </div>
             </div>
           ))}
+
+          {/* {articles &&
+            articles.map((item) => (
+              <div className="home--articles__article--card">
+                <div className="home--articles__article--card__text">
+                  <h2>{item.title}</h2>
+                  <p>{item.description}</p>
+                  <div className="home--articles__article--card__text--link">
+                    <Link to={item.url}>Leer mas</Link>
+                  </div>
+                </div>
+                <div className="home--articles__article--card__img">
+                  <img src={item.img} alt={item.title} />
+                </div>
+              </div>
+            ))} */}
         </div>
       </div>
     </div>
