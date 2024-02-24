@@ -13,6 +13,7 @@ export const articles = [
       "Destaca las herramientas y tecnologías clave que todo desarrollador Full Stack debería conocer y dominar, desde frameworks de frontend como React o Angular, hasta bases de datos como MongoDB o MySQL.",
     image: "/assets/toolsimg.png",
     type: "fullstack",
+    url: "/articles/herramientas-desarrollador-full-stack",
   },
   {
     title: "JavaScript Tutorial",

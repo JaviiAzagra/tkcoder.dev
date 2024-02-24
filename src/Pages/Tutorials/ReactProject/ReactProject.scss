@@ -1,0 +1,78 @@
+@import "../../../Styles/Schema.scss";
+
+.reactproject {
+  padding-top: 120px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: $font-color;
+
+  &--title {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+    h1 {
+      font-size: 3.5rem;
+      line-height: 55px;
+      font-weight: 600;
+      color: $font-color;
+    }
+
+    p {
+      color: $font-secondary-color;
+    }
+  }
+
+  &--container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &__tutorial {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-bottom: 50px;
+      h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      a {
+        text-decoration: none;
+        color: $font-secondary-color;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .terminal {
+        background-color: #1e1e1e;
+        padding: 15px;
+        border-radius: 5px;
+        border-radius: 12px;
+        overflow-x: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1195px) {
+  .reactproject {
+    padding: 0 10% 0 10%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .reactproject {
+    padding: 0 10% 0 10%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+
+    &--title h1 {
+      font-size: 2.5rem;
+    }
+  }
+}

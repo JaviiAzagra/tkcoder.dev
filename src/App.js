@@ -14,7 +14,8 @@ import { useEffect, useState } from "react";
 import Popup from "./Components/Popup/Popup";
 import VscodeEx from "./Pages/Articles/VscodeEx/VscodeEx";
 import { useSpring, animated } from "react-spring";
-import Prueba from "./Pages/Articles/Prueba/Prueba";
+import ReactProject from "./Pages/Tutorials/ReactProject/ReactProject";
+import Herramientas from "./Pages/Articles/Herramientas/Herramientas";
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
@@ -58,12 +59,19 @@ function App() {
               path="/tutorials/instalar-ohmyposh-windows"
               element={<OhMyPosh />}
             />
+            <Route
+              path="/tutorials/crear-proyecto-react"
+              element={<ReactProject />}
+            />
             {/* Articles Routes */}
             <Route
               path="/articles/top-10-extensiones-visual-studio-code"
               element={<VscodeEx />}
             />
-            <Route path="/prueba" element={<Prueba />} />
+            <Route
+              path="/articles/herramientas-desarrollador-full-stack"
+              element={<Herramientas />}
+            />
           </Routes>
         </animated.div>
         <GoTop />

@@ -21,6 +21,7 @@ export const tutorials = [
       "En este tutorial te enseñaré cómo crear un nuevo proyecto en React desde cero.",
     image: "/assets/reacttutorial.png",
     type: "react",
+    url: "/tutorials/crear-proyecto-react",
   },
   {
     title: "Como crear un menú hamburguesa con HTML, CSS y JavaScript",

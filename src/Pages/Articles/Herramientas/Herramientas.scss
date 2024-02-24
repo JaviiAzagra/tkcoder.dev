@@ -1,0 +1,58 @@
+@import "../../../Styles/Schema.scss";
+
+.herramientas {
+  padding-top: 120px;
+  padding-bottom: 100px;
+  color: $font-color;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &--title {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+    h1 {
+      font-size: 3.5rem;
+      line-height: 55px;
+      font-weight: 600;
+      color: $font-color;
+    }
+
+    p {
+      color: $font-secondary-color;
+    }
+  }
+
+  &--container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &__tutorial {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-bottom: 50px;
+      h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      a {
+        text-decoration: none;
+        color: $font-secondary-color;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .terminal {
+        background-color: #1e1e1e;
+        padding: 15px;
+        border-radius: 5px;
+        border-radius: 12px;
+        overflow-x: auto;
+      }
+    }
+  }
+}

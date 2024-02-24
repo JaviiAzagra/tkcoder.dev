@@ -2,12 +2,16 @@ import React, { useEffect, useState } from "react";
 import "./VscodeEx.scss";
 import axios from "axios";
 import Pagination from "../../../Components/Pagination/Pagination";
+import moment from "moment";
+import "moment/locale/es";
 
 const VscodeEx = () => {
   const [comment, setComment] = useState({
     name: "",
     content: "",
-    date: new Date().toISOString().split("T")[0],
+    date: new Date(
+      new Date().toLocaleString("en-US", { timeZone: "Europe/Madrid" })
+    ).toISOString(),
     url: "vscodeext",
   });
 
@@ -346,15 +350,12 @@ const VscodeEx = () => {
             currentComments.reverse().map((item) => (
               <div className="comments--container__comment" key={item.id}>
                 <div className="shuffle">
-                  {/* <img src="/assets/logos/js.png" alt="Userimg" />
-                  <img src="/assets/logos/react.png" alt="Userimg" />
-                  <img src="/assets/logos/html.png" alt="Userimg" /> */}
                   <img src="/assets/userimg.png" alt="Userimg" />
                 </div>
                 <div>
                   <h3>{item.name}</h3>
                   <p>{item.content}</p>
-                  {/* <p>{item.date}</p> */}
+                  <span>{moment(item.date).fromNow()}</span>
                 </div>
               </div>
             ))}
