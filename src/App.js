@@ -16,6 +16,7 @@ import VscodeEx from "./Pages/Articles/VscodeEx/VscodeEx";
 import { useSpring, animated } from "react-spring";
 import ReactProject from "./Pages/Tutorials/ReactProject/ReactProject";
 import Herramientas from "./Pages/Articles/Herramientas/Herramientas";
+import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
@@ -72,6 +73,7 @@ function App() {
               path="/articles/herramientas-desarrollador-full-stack"
               element={<Herramientas />}
             />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </animated.div>
         <GoTop />
