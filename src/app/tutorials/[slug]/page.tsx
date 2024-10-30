@@ -8,8 +8,7 @@ type TutorialProps = {
 
 const Tutorial = async ({ params }: TutorialProps) => {
   const { slug } = await params;
-
-  const tutorial = getTutorialBySlug(slug);
+  const tutorial = await getTutorialBySlug(slug);
 
   if (!tutorial) {
     return <div>Tutorial no encontrado</div>;

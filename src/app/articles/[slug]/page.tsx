@@ -9,7 +9,7 @@ type ArticleProps = {
 const Article = async ({ params }: ArticleProps) => {
   const { slug } = await params;
 
-  const article = getArticleBySlug(slug);
+  const article = await getArticleBySlug(slug);
 
   if (!article) {
     return <div>Artículo no encontrado</div>;
