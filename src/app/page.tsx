@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getAllTutorials } from "../lib/tutorials";
 import { getAllArticles } from "../lib/articles";
-import { keywordColors, getBackgroundColor } from "../lib/colors";
+import { getBackgroundColor } from "../lib/colors";
 
 export default function Home() {
   const tutorials = getAllTutorials();

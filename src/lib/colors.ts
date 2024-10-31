@@ -4,6 +4,12 @@ export const keywordColors: { [key: string]: string } = {
     VsCode: "bg-blue-600 text-white",
     PowerShell: "bg-blue-950 text-white",
     Windows: "bg-cyan-500",
+    TypeScript: "bg-blue-600 text-white",
+    NodeJS: "bg-green-500",
+    Python: "bg-yellow-500",
+    CSS: "bg-blue-300",
+    HTML: "bg-red-300",
+    TailwindCSS: "bg-sky-200",
   };
 
   export const getBackgroundColor = (keywords: string[]): string => {

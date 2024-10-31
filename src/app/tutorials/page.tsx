@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getAllTutorials } from "../../lib/tutorials";
-import { keywordColors, getBackgroundColor } from "../../lib/colors";
+import { getBackgroundColor } from "../../lib/colors";
 
 const PostsPage = () => {
   const tutorials = getAllTutorials();
