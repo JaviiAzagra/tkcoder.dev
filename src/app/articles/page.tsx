@@ -5,9 +5,11 @@ const PostsPage = () => {
   const articles = getAllArticles();
 
   const keywordColors: { [key: string]: string } = {
-    react: "bg-blue-200",
-    javascript: "bg-yellow-200",
-    VsCode: "bg-blue-700",
+    React: "bg-blue-500 text-white",
+    JavaScript: "bg-yellow-400",
+    VsCode: "bg-blue-600 text-white",
+    PowerShell: "bg-blue-950 text-white",
+    Windows: "bg-cyan-500",
   };
 
   const getBackgroundColor = (keywords: string[]): string => {
@@ -35,8 +37,8 @@ const PostsPage = () => {
               {article.keywords.map((keyword, index) => (
                 <span
                   key={index}
-                  className={`text-sm font-semibold bg-green-500 bg-opacity-30 rounded-full px-2 py-1 ${getBackgroundColor(
-                    article.keywords
+                  className={`text-sm font-semibold bg-green-500 rounded-full px-2 py-1 ${getBackgroundColor(
+                    keyword.split(" ")
                   )}`}
                 >
                   {keyword}
