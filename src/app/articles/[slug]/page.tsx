@@ -2,14 +2,13 @@ import Chevronleft from "@/icons/Chevronleft";
 import { getArticleBySlug } from "../../../lib/articles";
 import Link from "next/link";
 
-type ArticleProps = {
-  params: { slug: string };
-};
+// Definimos el tipo para los parámetros
+type Params = { slug: string };
 
-const Article = async ({ params }: ArticleProps) => {
-  const { slug } = await params;
-
-  const article = await getArticleBySlug(slug);
+// Componente de la página de artículo
+const Article = async ({ params }: { params: Promise<Params> }) => {
+  const { slug } = await params; // Esperamos a que params se resuelva
+  const article = await getArticleBySlug(slug); // Cargamos el artículo
 
   if (!article) {
     return <div>Artículo no encontrado</div>;

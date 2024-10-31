@@ -2,16 +2,16 @@ import Chevronleft from "@/icons/Chevronleft";
 import { getTutorialBySlug } from "../../../lib/tutorials";
 import Link from "next/link";
 
-type TutorialProps = {
-  params: { slug: string };
-};
+// Definimos el tipo para los parámetros
+type Params = { slug: string };
 
-const Tutorial = async ({ params }: TutorialProps) => {
-  const { slug } = await params;
-  const tutorial = await getTutorialBySlug(slug);
+// Componente de la página de artículo
+const Tutorial = async ({ params }: { params: Promise<Params> }) => {
+  const { slug } = await params; // Esperamos a que params se resuelva
+  const tutorial = await getTutorialBySlug(slug); // Cargamos el artículo
 
   if (!tutorial) {
-    return <div>Tutorial no encontrado</div>;
+    return <div>Artículo no encontrado</div>;
   }
 
   return (
@@ -20,7 +20,7 @@ const Tutorial = async ({ params }: TutorialProps) => {
         <Chevronleft />
         <div className="flex items-center gap-x-2">
           <Link className="hover:underline" href="/tutorials">
-            Tutoriales
+            Artículos
           </Link>
           <p>&gt;</p>
           <p className="font-bold capitalize">{tutorial.title}</p>
