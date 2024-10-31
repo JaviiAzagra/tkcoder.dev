@@ -1,6 +1,6 @@
 export default async function Page() {
   return (
-    <section className="h-screen max-w-[370px] m-auto flex flex-col lg:pt-52    ">
+    <section className="max-w-[370px] m-auto flex flex-col lg:pt-52">
       <div className="w-full mb-8 cursor-pointer">
         <h1 className="text-3xl font-bold flex items-center">
           <img

@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className="background">
+      <body className="background h-screen flex flex-col justify-between">
         <Header />
         <Gotop />
         <main className="p-5 pt-28 pb-10 lg:ml-80 lg:py-12 lg:mr-16">
