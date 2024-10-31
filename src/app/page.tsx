@@ -1,27 +1,11 @@
 import Link from "next/link";
 import { getAllTutorials } from "../lib/tutorials";
 import { getAllArticles } from "../lib/articles";
+import { keywordColors, getBackgroundColor } from "../lib/colors";
 
 export default function Home() {
   const tutorials = getAllTutorials();
   const articles = getAllArticles();
-
-  const keywordColors: { [key: string]: string } = {
-    React: "bg-blue-500 text-white",
-    JavaScript: "bg-yellow-400",
-    VsCode: "bg-blue-600 text-white",
-    PowerShell: "bg-blue-950 text-white",
-    Windows: "bg-cyan-500",
-  };
-
-  const getBackgroundColor = (keywords: string[]): string => {
-    for (let keyword of keywords) {
-      if (keywordColors[keyword]) {
-        return keywordColors[keyword];
-      }
-    }
-    return "bg-gray-100";
-  };
 
   return (
     <section className="flex flex-col gap-y-10">
