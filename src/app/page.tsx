@@ -6,6 +6,23 @@ export default function Home() {
   const tutorials = getAllTutorials();
   const articles = getAllArticles();
 
+  const keywordColors: { [key: string]: string } = {
+    React: "bg-blue-500",
+    JavaScript: "bg-yellow-500",
+    VsCode: "bg-blue-700",
+    PowerShell: "bg-[#1E2E40]",
+    Windows: "bg-cyan-500",
+  };
+
+  const getBackgroundColor = (keywords: string[]): string => {
+    for (let keyword of keywords) {
+      if (keywordColors[keyword]) {
+        return keywordColors[keyword];
+      }
+    }
+    return "bg-gray-100";
+  };
+
   return (
     <section className="flex flex-col gap-y-10">
       <div className="flex flex-col gap-y-2 ">
@@ -31,7 +48,9 @@ export default function Home() {
                 {tutorial.keywords.map((keyword, index) => (
                   <span
                     key={index}
-                    className="text-sm font-semibold bg-green-500 bg-opacity-30 text-green-950 rounded-full px-2 py-1"
+                    className={`text-sm font-semibold bg-opacity-30 rounded-full px-2 py-1 ${getBackgroundColor(
+                      keyword.split(" ")
+                    )}`}
                   >
                     {keyword}
                   </span>
@@ -59,7 +78,9 @@ export default function Home() {
                 {article.keywords.map((keyword, index) => (
                   <span
                     key={index}
-                    className="text-sm font-semibold bg-green-500 bg-opacity-30 text-green-950 rounded-full px-2 py-1"
+                    className={`text-sm font-semibold bg-opacity-30 rounded-full px-2 py-1 ${getBackgroundColor(
+                      keyword.split(" ")
+                    )}`}
                   >
                     {keyword}
                   </span>

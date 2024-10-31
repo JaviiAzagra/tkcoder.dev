@@ -4,10 +4,27 @@ import { getAllTutorials } from "../../lib/tutorials";
 const PostsPage = () => {
   const tutorials = getAllTutorials();
 
+  const keywordColors: { [key: string]: string } = {
+    React: "bg-blue-500",
+    JavaScript: "bg-yellow-500",
+    VsCode: "bg-blue-700",
+    PowerShell: "bg-[#182433]",
+    Windows: "bg-cyan-500",
+  };
+
+  const getBackgroundColor = (keywords: string[]): string => {
+    for (let keyword of keywords) {
+      if (keywordColors[keyword]) {
+        return keywordColors[keyword];
+      }
+    }
+    return "bg-green-100";
+  };
+
   return (
     <div className="flex flex-col gap-y-10">
       <h1 className="text-4xl font-bold">Tutoriales</h1>
-      <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-10">
+      <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-10 text-">
         {tutorials.map((tutorial) => (
           <Link
             key={tutorial.slug}
@@ -20,7 +37,9 @@ const PostsPage = () => {
               {tutorial.keywords.map((keyword, index) => (
                 <span
                   key={index}
-                  className="text-sm font-semibold bg-green-500 bg-opacity-30 text-green-950 rounded-full px-2 py-1"
+                  className={`text-sm font-semibold bg-opacity-30 rounded-full px-2 py-1 ${getBackgroundColor(
+                    keyword.split(" ")
+                  )}`}
                 >
                   {keyword}
                 </span>
