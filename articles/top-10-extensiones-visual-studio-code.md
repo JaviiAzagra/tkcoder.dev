@@ -15,52 +15,72 @@ keywords: ["VsCode"]
 <div class="section">
 
   <div class="container">
+  <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank" rel="noopener noreferrer">
     <h1>1. PRETTIER</h1>
+  </a>
     <p>Esta herramienta te permite automatizar el formateo del código según las convenciones de cada lenguaje de programación. Es compatible con una amplia variedad de lenguajes, incluyendo JavaScript, JSX, Flow, TypeScript, JSON, HTML, Vue, Angular, CSS, Less, SCSS, GraphQL, MarkDown, CommonMark, MDX y YAML. Prettier viene con reglas predefinidas, pero también te permite personalizarlas según tus preferencias, como la ubicación de los saltos de línea, las tabulaciones, los espacios, entre otros.</p>
   </div>
 
   <div class="container">
+  <a href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare" target="_blank" rel="noopener noreferrer">
     <h1>2. LIVE SHARE</h1>
+  </a>
     <p>Esta extensión te brinda la capacidad de colaborar en tiempo real con otro programador mientras editas y depuras el código. Además de permitir la comunicación mediante llamadas y chat, también facilita el intercambio de terminales y servidores. Al igual que en otras herramientas de trabajo colaborativo, puedes visualizar la posición de tu compañero en el programa y en qué línea de código están trabajando. Si surge algún problema, tienen la opción de comunicarse y resolverlo juntos al momento. ¡Celebremos el poder del trabajo en equipo en tiempo real!</p>
   </div>
 
   <div class="container">
+  <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" target="_blank" rel="noopener noreferrer">
     <h1>3. ESLINT</h1>
+  </a>
     <p>ESLint es una herramienta de linting para JavaScript que ayuda a identificar y corregir problemas en el código JavaScript. Su principal objetivo es ayudar a mantener un código limpio y consistente dentro de un proyecto, siguiendo las mejores prácticas y evitando errores comunes.</p>
   </div>
 
   <div class="container">
-    <h1>4. GITLENS</h1>
+  <a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens" target="_blank" rel="noopener noreferrer">
+     <h1>4. GITLENS</h1>
+  </a>
     <p>Esta extensión ofrece una amplia gama de herramientas para gestionar proyectos con GIT. Con ella, puedes acceder a información detallada como el autor de las confirmaciones, detalles del repositorio actual y las ramas disponibles. Además, según el archivo o línea en la que te encuentres, te permite revisar el historial de cambios, facilitando comparaciones precisas. Es una herramienta muy completa que optimiza tu experiencia al trabajar con GIT.</p>
   </div>
 
   <div class="container">
+  <a href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow" target="_blank" rel="noopener noreferrer">
     <h1>5. INDENT RAINBOW</h1>
+  </a>
     <p>Esta extensión emplea barras de colores para visualizar el nivel de indentación de tu código, lo que mejora su legibilidad. Mientras que para códigos pequeños podría no ser crucial, a medida que estos crecen, la identificación de la indentación puede volverse más complicada. Esta herramienta resuelve este problema, haciendo que trabajar con código de mayor tamaño sea mucho más sencillo. Su utilidad es comparable a la alegría que trae un arcoíris después de una tormenta.</p>
   </div>
 
   <div class="container">
+  <a href="https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap" target="_blank" rel="noopener noreferrer">
     <h1>6. CODESNAP</h1>
+  </a>
     <p>La extensión CodeSnap para Visual Studio Code (VSCode) es una herramienta poderosa que permite a los desarrolladores capturar y compartir fragmentos de código de manera rápida y sencilla. Esta extensión es especialmente útil para la creación de tutoriales, documentación de código, presentaciones y comunicación en equipos de desarrollo.</p>
   </div>
 
   <div class="container">
+  <a href="https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens" target="_blank" rel="noopener noreferrer">
     <h1>7. ERROR LENS</h1>
+  </a>
     <p>Error Lens es una extensión altamente valorada para Visual Studio Code que mejora significativamente la experiencia de desarrollo al proporcionar una visualización instantánea y enriquecida de los errores y advertencias en el código. Esta herramienta esencial ofrece una forma eficiente y efectiva de identificar y abordar problemas de código mientras se escribe, lo que permite a los desarrolladores mantener un flujo de trabajo productivo y enfocado.</p>
   </div>
 
   <div class="container">
+  <a href="https://marketplace.visualstudio.com/items?itemName=Postman.postman-for-vscode" target="_blank" rel="noopener noreferrer">
     <h1>8. POSTMAN</h1>
+  </a>
     <p>La extensión de Postman para Visual Studio Code es una herramienta imprescindible para los desarrolladores que trabajan con APIs. Postman, una plataforma ampliamente reconocida y utilizada para probar y documentar APIs, ahora se integra perfectamente en el entorno de desarrollo de VSCode, brindando a los desarrolladores una experiencia fluida y unificada.</p>
   </div>
 
   <div class="container">
+  <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank" rel="noopener noreferrer">
     <h1>9. LIVE SERVER</h1>
+  </a>
     <p>Esta extensión es altamente valorada por desarrolladores front-end, ya que establece un servidor local que te permite visualizar tus cambios en tiempo real. Con esta función, cualquier modificación que realices se actualizará automáticamente en el servidor local, lo que facilita enormemente el proceso de desarrollo y visualización de tu trabajo en curso.</p>
   </div>
 
   <div class="container">
+  <a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker" target="_blank" rel="noopener noreferrer">
     <h1>10. CODE SPELL CHECKER</h1>
+  </a>
     <p>La extensión Code Spell Checker para Visual Studio Code es una herramienta esencial para los desarrolladores que desean mantener un código limpio y libre de errores tipográficos. Esta extensión ofrece una forma rápida y eficiente de identificar y corregir errores de ortografía en el código, comentarios y cadenas de texto, lo que ayuda a mejorar la legibilidad y la calidad del código.</p>
   </div>
 
@@ -84,6 +104,10 @@ keywords: ["VsCode"]
     gap: 30px;
     flex-direction: column;
   }
+
+a:hover{
+    text-decoration: underline;
+}
 
   img{
     max-width: 500px;
@@ -115,7 +139,5 @@ keywords: ["VsCode"]
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 
   }
-
-  border w-full h-[200px] rounded-lg bg-white p-6 shadow-sm shadow-black/50
 
 </style>

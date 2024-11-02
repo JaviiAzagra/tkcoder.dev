@@ -25,7 +25,7 @@ const Header = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <header className="flex flex-col justify-between fixed lg:top-0 lg:left-0 lg:h-screen lg:w-64 w-full bg-white text-black p-3 lg:p-6 shadow-xl shadow-black/50 z-50">
+    <header className="flex flex-col justify-between fixed border-b border-[#bcbcbc] lg:border-none lg:top-0 lg:left-0 lg:h-screen lg:w-64 w-full bg-white text-black p-3 lg:p-6 lg:shadow-xl shadow-black/50 z-50">
       <div className="flex justify-between items-center lg:flex-col lg:items-start">
         <div onClick={goTop} className="cursor-pointer flex flex-col ">
           <h1 className="flex items-center text-3xl font-bold text-[#FB8B00]">
@@ -43,7 +43,6 @@ const Header = () => {
           </p>
         </div>
 
-        {/* Botón hamburguesa en dispositivos móviles */}
         <button
           className="lg:hidden text-3xl"
           onClick={toggleMenu}
