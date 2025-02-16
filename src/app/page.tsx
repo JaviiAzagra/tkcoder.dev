@@ -33,7 +33,7 @@ export default function Home() {
                   <span
                     key={index}
                     className={`text-sm font-semibold rounded-full px-2 py-1 ${getBackgroundColor(
-                      keyword.split(" ")
+                      [keyword]
                     )}`}
                   >
                     {keyword}
@@ -63,7 +63,7 @@ export default function Home() {
                   <span
                     key={index}
                     className={`text-sm font-semibold rounded-full px-2 py-1 ${getBackgroundColor(
-                      keyword.split(" ")
+                      [keyword]
                     )}`}
                   >
                     {keyword}

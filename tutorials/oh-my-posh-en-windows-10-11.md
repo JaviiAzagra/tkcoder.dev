@@ -1,6 +1,6 @@
 ---
 title: "Como instalar Oh my Posh en Windows 10/11"
-date: "2024-01-01"
+date: "12-02-2025"
 description: "En este tutorial te mostraré cómo instalar Oh My Posh en Windows 10/11 y cómo configurarlo para que se ejecute automáticamente cada vez que abras una nueva ventana de PowerShell."
 keywords: ["PowerShell", "Windows"]
 ---
@@ -85,10 +85,6 @@ keywords: ["PowerShell", "Windows"]
     height: fit-content;
     border-radius: 8px;
   }
-  
-  a:hover{
-    color: blue;
-  }
 
   code{
     background-color: black;
@@ -115,7 +111,5 @@ keywords: ["PowerShell", "Windows"]
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 
   }
-
-  border w-full h-[200px] rounded-lg bg-white p-6 shadow-sm shadow-black/50
 
 </style>

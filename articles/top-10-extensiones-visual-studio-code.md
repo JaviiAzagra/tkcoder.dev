@@ -1,6 +1,6 @@
 ---
 title: "Top 10 extensiones de Visual Studio Code"
-date: "2024-01-01"
+date: "12-02-2025"
 description: "En este artículo, te presentaré las 10 extensiones que son imprescindibles para maximizar tu experiencia con Visual Studio Code y simplificar tus tareas diarias."
 keywords: ["VsCode"]
 ---
@@ -14,11 +14,12 @@ keywords: ["VsCode"]
 
 <div class="section">
 
-  <div class="container">
-  <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank" rel="noopener noreferrer">
-    <h1>1. PRETTIER</h1>
-  </a>
-    <p>Esta herramienta te permite automatizar el formateo del código según las convenciones de cada lenguaje de programación. Es compatible con una amplia variedad de lenguajes, incluyendo JavaScript, JSX, Flow, TypeScript, JSON, HTML, Vue, Angular, CSS, Less, SCSS, GraphQL, MarkDown, CommonMark, MDX y YAML. Prettier viene con reglas predefinidas, pero también te permite personalizarlas según tus preferencias, como la ubicación de los saltos de línea, las tabulaciones, los espacios, entre otros.</p>
+<div class="container">
+<a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank" rel="noopener noreferrer">
+<h1>1. PRETTIER</h1>
+</a>
+<p>Esta herramienta te permite automatizar el formateo del código según las convenciones de cada lenguaje de programación. Es compatible con una amplia variedad de lenguajes, incluyendo JavaScript, JSX, Flow, TypeScript, JSON, HTML, Vue, Angular, CSS, Less, SCSS, GraphQL, MarkDown, CommonMark, MDX y YAML. Prettier viene con reglas predefinidas, pero también te permite personalizarlas según tus preferencias, como la ubicación de los saltos de línea, las tabulaciones, los espacios, entre otros.</p>
+
   </div>
 
   <div class="container">

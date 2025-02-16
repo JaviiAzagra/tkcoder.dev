@@ -1,6 +1,6 @@
 ---
 title: "Añadir Dark Mode en tu página de React"
-date: "2024-01-01"
+date: "12-02-2025"
 description: "El modo oscuro sería una excelente adición a tu aplicación, ya que enriquecería la experiencia del usuario. En esta ocasión, te mostraré cómo implementarlo en React sin necesidad de utilizar ninguna librería externa."
 keywords: ["React", "JavaScript"]
 ---
@@ -92,7 +92,5 @@ keywords: ["React", "JavaScript"]
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 
   }
-
-  border w-full h-[200px] rounded-lg bg-white p-6 shadow-sm shadow-black/50
 
 </style>

@@ -8,7 +8,7 @@ const Footer = () => {
         Desarrollado por{" "}
         <a
           className="font-bold hover:underline"
-          href="https://javierazagra.com"
+          href="https://javiazagra.com"
           target="_blank"
         >
           Javier Azagra.

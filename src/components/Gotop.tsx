@@ -28,9 +28,10 @@ const Gotop = () => {
     isVisible && ( // Renderizar el botón solo si `isVisible` es true
       <div
         onClick={goTop}
-        className="hidden lg:flex fixed bottom-2 right-2 p-2 border rounded-lg bg-white shadow-sm shadow-black/50 hover:scale-105 transition-all"
+        className="hidden lg:flex fixed bottom-4 right-4 p-2 border rounded-lg bg-white shadow-sm shadow-black/50 hover:scale-125 transition-all"
       >
         <svg
+          className="hover:rotate-45 transition-all"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
